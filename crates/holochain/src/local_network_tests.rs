@@ -417,6 +417,7 @@ async fn check_gossip(
         expected_count,
         NUM_ATTEMPTS,
         DELAY_PER_ATTEMPT.clone(),
+        None,
     )
     .await;
     for hash in posts {

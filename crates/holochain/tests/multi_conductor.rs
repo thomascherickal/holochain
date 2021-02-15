@@ -180,7 +180,7 @@ async fn invalid_cell() -> anyhow::Result<()> {
     // wait_for_integration_10s(&alice.env().await, expected_count).await;
     show_authored(&envs);
     // wait_for_integration_10s(&carol_env, expected_count).await;
-    wait_for_integration_with_others_10s(&alice_env, &envs, expected_count).await;
+    wait_for_integration_with_others_10s(&alice_env, &envs, expected_count, None).await;
     let r: MaybeElement = conductors[0]
         .call(&alice.zome("zome1"), "read", hash.clone())
         .await;
